@@ -1,0 +1,274 @@
+python-sphinx-alabaster-theme
+# ignored anaconda-2019.03-py37_0.json
+# ignored anaconda-client-1.7.2-py37_0.json
+# ignored anaconda-navigator-1.9.7-py37_0.json
+# ignored anaconda-project-0.8.2-py37_0.json
+python-asn1crypto
+python-astroid
+# ignored astropy-3.1.2-py37h7b6447c_0.json
+python-atomicwrites
+python-attrs
+python-babel
+# ignored backcall-0.1.0-py37_0.json
+# ignored backports-1.0-py37_1.json
+# ignored backports.os-0.1.1-py37_0.json
+# ignored backports.shutil_get_terminal_size-1.0.0-py37_2.json
+python-beautifulsoup4
+# ignored bitarray-0.8.3-py37h14c3975_0.json
+# ignored bkcharts-0.2-py37_0.json
+# failed blas-1.0-mkl.json
+python-bleach
+blosc
+# ignored bokeh-1.0.4-py37_0.json
+python-boto
+python-bottleneck
+bzip2
+ca-certificates
+cairo
+python-certifi
+python-cffi
+python-chardet
+python-click
+python-cloudpickle
+# ignored clyent-1.2.2-py37_1.json
+python-colorama
+python-conda
+# ignored conda-build-3.17.8-py37_0.json
+# ignored conda-env-2.6.0-1.json
+# ignored conda-verify-3.1.1-py37_0.json
+python-contextlib2
+python-cryptography
+curl
+python-cycler
+cython
+# ignored cytoolz-0.9.0.1-py37h14c3975_1.json
+# ignored dask-1.1.4-py37_1.json
+# failed dask-core-1.1.4-py37_1.json
+dbus
+python-decorator
+python-defusedxml
+# ignored distributed-1.26.0-py37_1.json
+python-docutils
+python-entrypoints
+python-et-xmlfile
+expat
+# ignored fastcache-1.0.2-py37h14c3975_2.json
+python-filelock
+python-flask
+fontconfig
+freetype2
+fribidi
+python-future
+# failed get_terminal_size-1.0.0-haa9412d_0.json
+python-gevent
+glib2
+# failed glob2-0.6-py37_1.json
+gmp
+python-gmpy2
+# failed graphite2-1.3.13-h23475e2_0.json
+python-greenlet
+gst-plugins-base
+gstreamer
+python-h5py
+harfbuzz
+hdf5
+# ignored heapdict-1.0.0-py37_2.json
+python-html5lib
+icu
+python-idna
+python-imageio
+python-imagesize
+python-importlib-metadata
+intel-openmp
+python-ipykernel
+ipython
+# failed ipython_genutils-0.2.0-py37_0.json
+python-ipywidgets
+# ignored _ipyw_jlab_nb_ext_conf-0.1.0-py37_0.json
+python-isort
+python-itsdangerous
+# failed jbig-2.1-hdba287a_0.json
+python-jdcal
+python-jedi
+python-jeepney
+python-jinja
+# failed jpeg-9b-h024ee3a_2.json
+python-jsonschema
+jupyter
+python-jupyter_client
+jupyter_console
+python-jupyter_core
+jupyterlab
+jupyterlab_server
+python-keyring
+python-kiwisolver
+krb5
+python-lazy-object-proxy
+libarchive
+# ignored libcurl-7.64.0-h20c2e04_2.json
+libedit
+libffi
+gcc
+gcc-fortran
+# failed liblief-0.9.0-h7725739_2.json
+libpng
+libsodium
+libssh2
+# failed libstdcxx-ng-8.2.0-hdf63c60_1.json
+libtiff
+libtool
+# failed libuuid-1.0.3-h1bed415_2.json
+libxcb
+libxml2
+libxslt
+python-llvmlite
+# ignored locket-0.2.0-py37_1.json
+python-lxml
+lz4
+lzo
+python-markupsafe
+python-matplotlib
+python-mccabe
+python-mistune
+intel-mkl
+# failed mkl_fft-1.0.10-py37ha843d7b_0.json
+# failed mkl_random-1.0.2-py37hd81dba3_0.json
+# failed mkl-service-1.1.2-py37he904b0f_5.json
+python-more-itertools
+mpc
+mpfr
+python-mpmath
+python-msgpack
+# ignored multipledispatch-0.6.0-py37_0.json
+# ignored navigator-updater-0.2.1-py37_0.json
+jupyter-nbconvert
+jupyter-nbformat
+ncurses
+python-networkx
+python-nltk
+python-nose
+jupyter-notebook
+python-numba
+python-numexpr
+python-numpy
+python-numpy
+python-numpydoc
+python-olefile
+python-openpyxl
+openssl
+python-packaging
+python-pandas
+# failed pandoc-2.2.3.2-0.json
+python-pandocfilters
+pango
+python-parso
+# ignored partd-0.3.10-py37_1.json
+patchelf
+python-pathlib2
+python-path.py
+python-patsy
+pcre
+# ignored pep8-1.7.1-py37_0.json
+python-pexpect
+python-pickleshare
+python-pillow
+python-pip
+pixman
+python-pkginfo
+python-pluggy
+python-ply
+python-prometheus_client
+python-prompt_toolkit
+python-psutil
+python-ptyprocess
+python-py
+python-pycodestyle
+python-pycosat
+python-pycparser
+# ignored pycrypto-2.6.1-py37h14c3975_9.json
+python-pycurl
+python-pyflakes
+python-pygments
+# failed py-lief-0.9.0-py37h7725739_2.json
+python-pylint
+python-pyodbc
+python-pyopenssl
+python-pyparsing
+python-pyqt5
+python-pyrsistent
+python-pysocks
+python-pytables
+python-pytest
+# ignored pytest-arraydiff-0.3-py37h39e3cac_0.json
+# ignored pytest-astropy-0.5.0-py37_0.json
+# ignored pytest-doctestplus-0.3.0-py37_0.json
+# ignored pytest-openfiles-0.3.2-py37_0.json
+# ignored pytest-remotedata-0.3.1-py37_0.json
+python
+python-dateutil
+python-libarchive-c
+python-pytz
+python-pywavelets
+# failed pyyaml-5.1-py37h7b6447c_0.json
+python-pyzmq
+qt5-base
+python-qtawesome
+python-qtconsole
+python-qtpy
+readline
+python-requests
+python-rope
+python-ruamel-yaml
+python-scikit-image
+python-scikit-learn
+python-scipy
+python-seaborn
+python-secretstorage
+python-send2trash
+python-setuptools
+# ignored simplegeneric-0.8.1-py37_2.json
+# ignored singledispatch-3.4.0.3-py37_0.json
+python-sip
+python-six
+snappy
+python-snowballstemmer
+# ignored sortedcollections-1.1.2-py37_0.json
+python-sortedcontainers
+python-soupsieve
+python-sphinx
+# failed sphinxcontrib-1.0-py37_1.json
+python-sphinxcontrib-websupport
+spyder
+python-spyder-kernels
+python-sqlalchemy
+sqlite
+python-statsmodels
+python-sympy
+python-tblib
+python-terminado
+python-testpath
+tk
+# ignored toolz-0.9.0-py37_0.json
+python-tornado
+python-tqdm
+python-traitlets
+# ignored unicodecsv-0.14.1-py37_0.json
+unixodbc
+python-urllib3
+python-wcwidth
+python-webencodings
+python-werkzeug
+python-wheel
+jupyter-widgetsnbextension
+python-wrapt
+# ignored wurlitzer-1.0.2-py37_0.json
+python-xlrd
+python-xlsxwriter
+python-xlwt
+xz
+# failed yaml-0.1.7-had09818_2.json
+zeromq
+# ignored zict-0.1.4-py37_0.json
+python-zipp
+zlib
+zstd

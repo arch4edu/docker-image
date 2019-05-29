@@ -1,0 +1,38 @@
+# syntax = docker/dockerfile:experimental
+FROM archlinux/base
+
+# Configure pacman
+RUN sed '1i\Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch' -i /etc/pacman.d/mirrorlist
+RUN sed -e 's/#Color/Color/' -e 's/CheckSpace/#CheckSpace/' -i /etc/pacman.conf
+RUN pacman-key --init
+RUN pacman-key --recv-keys 7931B6D628C8D3BA
+RUN pacman-key --finger 7931B6D628C8D3BA
+RUN pacman-key --lsign-key 7931B6D628C8D3BA
+COPY pacman.conf /opt
+RUN cat /opt/pacman.conf >> /etc/pacman.conf
+RUN rm /opt/pacman.conf
+RUN rm /usr/share/libalpm/hooks/package-cleanup.hook
+
+# System upgrate
+RUN --mount=type=cache,target=/var/cache/pacman/pkg \
+pacman -Syu --noconfirm
+
+# Install basic packages
+RUN --mount=type=cache,target=/var/cache/pacman/pkg \
+pacman -S --needed --noconfirm base-devel pkgstats
+
+# Use zsh like archiso
+RUN --mount=type=cache,target=/var/cache/pacman/pkg \
+pacman -S --needed --noconfirm zsh zsh-completions grml-zsh-config
+RUN chsh -s /usr/bin/zsh
+
+# Install packages from packages.txt
+RUN --mount=type=cache,target=/var/cache/pacman/pkg \
+pacman -S --needed --noconfirm PACKAGES
+
+# Clean up cache
+RUN --mount=type=cache,target=/var/cache/pacman/pkg \
+pacman -Sc --noconfirm
+
+# Copy README
+COPY README.md /root/README.md
