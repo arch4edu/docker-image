@@ -11,7 +11,7 @@ RUN pacman-key --lsign-key 7931B6D628C8D3BA
 COPY pacman.conf /opt
 RUN cat /opt/pacman.conf >> /etc/pacman.conf
 RUN rm /opt/pacman.conf
-RUN rm /usr/share/libalpm/hooks/package-cleanup.hook
+RUN mv /usr/share/libalpm/hooks/package-cleanup.hook /usr/share/libalpm/hooks/package-cleanup.hook.bak
 
 # System upgrate
 RUN --mount=type=cache,target=/var/cache/pacman/pkg \
@@ -30,9 +30,11 @@ RUN chsh -s /usr/bin/zsh
 RUN --mount=type=cache,target=/var/cache/pacman/pkg \
 pacman -S --needed --noconfirm PACKAGES
 
-# Clean up cache
+# Postprocess
 RUN --mount=type=cache,target=/var/cache/pacman/pkg \
 pacman -Sc --noconfirm
+RUN sed 's/#CheckSpace/CheckSpace/' -i /etc/pacman.conf
+RUN mv /usr/share/libalpm/hooks/package-cleanup.hook.bak /usr/share/libalpm/hooks/package-cleanup.hook
 
 # Copy README
 COPY README.md /root/README.md
