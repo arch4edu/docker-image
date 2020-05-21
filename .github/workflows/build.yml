@@ -1,0 +1,65 @@
+name: Build latest image
+
+on:
+  #schedule:
+  #  - cron: '29 23 * * 3'
+  repository_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux
+
+    steps:
+      - name: Update package database
+        run: |
+          pacman -Sy
+
+      - name: Install git and python
+        run: |
+          pacman -S --noconfirm git python
+
+      - uses: actions/checkout@master
+
+      - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@master
+
+      - name: Configure arch4edu
+        run: |
+          cat pacman.conf >> /etc/pacman.conf
+          cp arch4edu-keyring/* /usr/share/pacman/keyrings/
+          pacman-key --init
+          pacman-key --populate arch4edu
+
+      - name: Update package database again
+        run: |
+          pacman -Sy
+          pacman -Fy
+
+      - name: Generate packages.txt
+        run: |
+          python packages.py
+
+      - name: Generate Dockerfile
+        run: |
+          sh calil.sh
+
+      - name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v3
+        with:
+          image: arch4edu/base
+          tag: latest
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: Jingbei Li
+          author_email: i@jingbei.li
+          message: "Updated packages.txt"
+          add: "packages.txt"
+        env:
+          GITHUB_TOKEN: ${{ secrets.DOCKER_IMAGE_GITHUB_TOKEN }}

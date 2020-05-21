@@ -11,5 +11,5 @@ sed "s/PACKAGES/$packages/" Dockerfile.template | DOCKER_BUILDKIT=1 docker build
 	--squash \
 	-t arch4edu/base:latest .
 
-docker save arch4edu/base | zstd -c -T32 --ultra -21 - > arch4edu.tar.zst
-docker push arch4edu/base:latest
+#docker save arch4edu/base | zstd -c -T32 --ultra -21 - > arch4edu.tar.zst
+#docker push arch4edu/base:latest
