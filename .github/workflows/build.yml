@@ -12,6 +12,12 @@ jobs:
       image: archlinux
 
     steps:
+      - name: Cache pacman packages
+        uses: actions/cache@master
+        with:
+          path: /var/cache/pacman/pkg
+          key: pacman-cache-x86_64
+
       - name: Update package database
         run: |
           pacman -Sy
