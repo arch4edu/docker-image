@@ -1,0 +1,3 @@
+[submodule "arch4edu-keyring"]
+	path = arch4edu-keyring
+	url = https://github.com/arch4edu/arch4edu-keyring
