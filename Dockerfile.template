@@ -2,39 +2,30 @@
 FROM archlinux/base
 
 # Configure pacman
-RUN sed '1i\Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch' -i /etc/pacman.d/mirrorlist
-RUN sed -e 's/#Color/Color/' -e 's/CheckSpace/#CheckSpace/' -i /etc/pacman.conf
+#RUN sed -e 's/#Color/Color/' -e 's/CheckSpace/#CheckSpace/' -i /etc/pacman.conf
+RUN sed -e 's/#Color/Color/' -i /etc/pacman.conf
+COPY arch4edu-keyring/* /usr/share/pacman/keyrings/
 RUN pacman-key --init
-RUN pacman-key --recv-keys 7931B6D628C8D3BA
-RUN pacman-key --finger 7931B6D628C8D3BA
-RUN pacman-key --lsign-key 7931B6D628C8D3BA
-COPY pacman.conf /opt
-RUN cat /opt/pacman.conf >> /etc/pacman.conf
-RUN rm /opt/pacman.conf
-RUN mv /usr/share/libalpm/hooks/package-cleanup.hook /usr/share/libalpm/hooks/package-cleanup.hook.bak
+RUN pacman-key --populate arch4edu
+COPY pacman.conf /tmp
+RUN cat /tmp/pacman.conf >> /etc/pacman.conf
+RUN rm /tmp/pacman.conf
 
-# System upgrate
-RUN --mount=type=cache,target=/var/cache/pacman/pkg \
-pacman -Syu --noconfirm
+# System upgrade
+RUN pacman -Syu --noconfirm
 
 # Install basic packages
-RUN --mount=type=cache,target=/var/cache/pacman/pkg \
-pacman -S --needed --noconfirm base-devel pkgstats
+RUN pacman -S --needed --noconfirm base-devel pkgstats
 
 # Use zsh like archiso
-RUN --mount=type=cache,target=/var/cache/pacman/pkg \
-pacman -S --needed --noconfirm zsh zsh-completions grml-zsh-config
+RUN pacman -S --needed --noconfirm zsh zsh-completions grml-zsh-config
 RUN chsh -s /usr/bin/zsh
 
 # Install packages from packages.txt
-RUN --mount=type=cache,target=/var/cache/pacman/pkg \
-pacman -S --needed --noconfirm PACKAGES
+RUN pacman -S --needed --noconfirm PACKAGES
 
 # Postprocess
-RUN --mount=type=cache,target=/var/cache/pacman/pkg \
-pacman -Sc --noconfirm
-RUN sed 's/#CheckSpace/CheckSpace/' -i /etc/pacman.conf
-RUN mv /usr/share/libalpm/hooks/package-cleanup.hook.bak /usr/share/libalpm/hooks/package-cleanup.hook
+#RUN sed 's/#CheckSpace/CheckSpace/' -i /etc/pacman.conf
 
 # Copy README
 COPY README.md /root/README.md
