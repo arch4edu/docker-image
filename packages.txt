@@ -1,18 +1,24 @@
+# ignored _ipyw_jlab_nb_ext_conf-0.1.0-py37_0.json
+# ignored _libgcc_mutex-0.1-main.json
 python-sphinx-alabaster-theme
-# ignored anaconda-2019.03-py37_0.json
+# ignored anaconda-2020.02-py37_0.json
 # ignored anaconda-client-1.7.2-py37_0.json
-# ignored anaconda-navigator-1.9.7-py37_0.json
-# ignored anaconda-project-0.8.2-py37_0.json
+# ignored anaconda-navigator-1.9.12-py37_0.json
+# ignored anaconda-project-0.8.4-py_0.json
+python-argh
 python-asn1crypto
 python-astroid
 python-astropy
 python-atomicwrites
 python-attrs
+autopep8
 python-babel
 # ignored backcall-0.1.0-py37_0.json
-# ignored backports-1.0-py37_1.json
-# ignored backports.os-0.1.1-py37_0.json
+# ignored backports-1.0-py_2.json
+# ignored backports.functools_lru_cache-1.6.1-py_0.json
 # ignored backports.shutil_get_terminal_size-1.0.0-py37_2.json
+# ignored backports.tempfile-1.0-py_1.json
+# ignored backports.weakref-1.0.post1-py_1.json
 python-beautifulsoup4
 python-bitarray
 # ignored bkcharts-0.2-py37_0.json
@@ -33,31 +39,35 @@ python-cloudpickle
 # ignored clyent-1.2.2-py37_1.json
 python-colorama
 python-conda
-# ignored conda-build-3.17.8-py37_0.json
+# ignored conda-build-3.18.11-py37_0.json
 # ignored conda-env-2.6.0-1.json
-# ignored conda-verify-3.1.1-py37_0.json
+python-conda-package-handling
+# ignored conda-verify-3.4.2-py_1.json
 python-contextlib2
 python-cryptography
 curl
 python-cycler
 cython
-# ignored cytoolz-0.9.0.1-py37h14c3975_1.json
-# ignored dask-1.1.4-py37_1.json
-# ignored dask-core-1.1.4-py37_1.json
+python-cytoolz
+python-dask
+# ignored dask-core-2.11.0-py_0.json
 dbus
 python-decorator
 python-defusedxml
-# ignored distributed-1.26.0-py37_1.json
+python-diff-match-patch
+# ignored distributed-2.11.0-py37_0.json
 python-docutils
 python-entrypoints
 python-et-xmlfile
 expat
 python-fastcache
 python-filelock
+flake8
 python-flask
 fontconfig
 freetype2
 fribidi
+python-fsspec
 python-future
 # ignored get_terminal_size-1.0.0-haa9412d_0.json
 python-gevent
@@ -72,19 +82,20 @@ gstreamer
 python-h5py
 harfbuzz
 hdf5
-# ignored heapdict-1.0.0-py37_2.json
+python-heapdict
 python-html5lib
+python-hypothesis
 icu
 python-idna
 python-imageio
 python-imagesize
 python-importlib-metadata
 intel-openmp
+python-intervaltree
 python-ipykernel
 ipython
 # ignored ipython_genutils-0.2.0-py37_0.json
 python-ipywidgets
-# ignored _ipyw_jlab_nb_ext_conf-0.1.0-py37_0.json
 python-isort
 python-itsdangerous
 jbigkit
@@ -92,7 +103,9 @@ python-jdcal
 python-jedi
 python-jeepney
 python-jinja
+python-joblib
 libjpeg-turbo
+python-json5
 python-jsonschema
 jupyter
 python-jupyter_client
@@ -104,8 +117,9 @@ python-keyring
 python-kiwisolver
 krb5
 python-lazy-object-proxy
+binutils
 libarchive
-# ignored libcurl-7.64.0-h20c2e04_2.json
+# ignored libcurl-7.68.0-h20c2e04_0.json
 libedit
 libffi
 gcc-libs
@@ -113,8 +127,9 @@ gcc-libs
 # ignored liblief-0.9.0-h7725739_2.json
 libpng
 libsodium
+spatialindex
 libssh2
-# ignored libstdcxx-ng-8.2.0-hdf63c60_1.json
+# ignored libstdcxx-ng-9.1.0-hdf63c60_0.json
 libtiff
 libtool
 libutil-linux
@@ -128,12 +143,14 @@ lz4
 lzo
 python-markupsafe
 python-matplotlib
+python-matplotlib
 python-mccabe
 python-mistune
 intel-mkl
-# ignored mkl_fft-1.0.10-py37ha843d7b_0.json
-# ignored mkl_random-1.0.2-py37hd81dba3_0.json
-# ignored mkl-service-1.1.2-py37he904b0f_5.json
+python-mkl-service
+python-mkl-fft
+python-mkl-random
+python-mock
 python-more-itertools
 mpc
 mpfr
@@ -162,10 +179,12 @@ pandoc
 python-pandocfilters
 pango
 python-parso
-# ignored partd-0.3.10-py37_1.json
+python-partd
 patchelf
+python-path
+python-path
 python-pathlib2
-python-path.py
+python-pathtools
 python-patsy
 pcre
 python-pep8
@@ -182,14 +201,15 @@ python-prompt_toolkit
 python-psutil
 python-ptyprocess
 python-py
+lief
 python-pycodestyle
 python-pycosat
 python-pycparser
 python-pycrypto
 python-pycurl
+python-pydocstyle
 python-pyflakes
 python-pygments
-lief
 python-pylint
 python-pyodbc
 python-pyopenssl
@@ -201,23 +221,30 @@ python-pytables
 python-pytest
 python-pytest-arraydiff
 python-pytest-astropy
+python-pytest-astropy-header
 python-pytest-doctestplus
 python-pytest-openfiles
 python-pytest-remotedata
 python
 python-dateutil
+python-jsonrpc-server
+python-language-server
 python-libarchive-c
 python-pytz
 python-pywavelets
+python-pyxdg
 python-yaml
 python-pyzmq
+python-qdarkstyle
 qt5-base
 python-qtawesome
 python-qtconsole
 python-qtpy
 readline
 python-requests
+ripgrep
 python-rope
+python-rtree
 python-ruamel-yaml
 python-scikit-image
 python-scikit-learn
@@ -237,6 +264,12 @@ python-sortedcontainers
 python-soupsieve
 python-sphinx
 # ignored sphinxcontrib-1.0-py37_1.json
+python-sphinxcontrib-applehelp
+python-sphinxcontrib-devhelp
+python-sphinxcontrib-htmlhelp
+python-sphinxcontrib-jsmath
+python-sphinxcontrib-qthelp
+python-sphinxcontrib-serializinghtml
 python-sphinxcontrib-websupport
 spyder
 python-spyder-kernels
@@ -244,17 +277,20 @@ python-sqlalchemy
 sqlite
 python-statsmodels
 python-sympy
+intel-tbb
 python-tblib
 python-terminado
 python-testpath
 tk
-# ignored toolz-0.9.0-py37_0.json
+python-toolz
 python-tornado
 python-tqdm
 python-traitlets
+python-ujson
 # ignored unicodecsv-0.14.1-py37_0.json
 unixodbc
 python-urllib3
+python-watchdog
 python-wcwidth
 python-webencodings
 python-werkzeug
@@ -265,10 +301,12 @@ python-wurlitzer
 python-xlrd
 python-xlsxwriter
 python-xlwt
+python-xmltodict
 xz
 libyaml
+yapf
 zeromq
-# ignored zict-0.1.4-py37_0.json
+python-zict
 python-zipp
 zlib
 zstd
