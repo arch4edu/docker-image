@@ -47,12 +47,12 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
-          author_name: Jingbei Li
-          author_email: i@jingbei.li
+          author_name: calilbot
+          author_email: calil@jingbei.li
           message: "Updated packages.txt"
           add: "packages.txt"
         env:
-          GITHUB_TOKEN: ${{ secrets.DOCKER_IMAGE_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CALIL_GITHUB_TOKEN }}
 
   build:
     runs-on: ubuntu-latest
