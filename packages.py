@@ -24,6 +24,7 @@ force['libgcc-ng'] = 'gcc-libs'
 force['libspatialindex'] = 'spatialindex'
 force['libuuid'] = 'libutil-linux'
 force['lz4-c'] = 'lz4'
+force['matplotlib'] = 'python-matplotlib'
 force['matplotlib-base'] = 'python-matplotlib'
 force['mkl'] = 'intel-mkl'
 force['mkl_fft'] = 'python-mkl-fft'
@@ -35,6 +36,7 @@ force['notebook'] = 'jupyter-notebook'
 force['numpy-base'] = 'python-numpy-mkl'
 force['pandoc'] = 'pandoc'
 force['path.py'] = 'python-path'
+force['prompt-toolkit'] = 'python-prompt_toolkit'
 force['py-lief'] = 'lief'
 force['pyyaml'] = 'python-yaml'
 force['pyqt'] = 'python-pyqt5'
@@ -45,6 +47,8 @@ force['spyder'] = 'spyder'
 force['tbb'] = 'intel-tbb'
 force['widgetsnbextension'] = 'jupyter-widgetsnbextension'
 force['yaml'] = 'libyaml'
+force['zope.event'] = 'python-zope-event'
+force['zope.interface'] = 'python-zope-interface'
 
 ignore = []
 ignore.append('_ipyw_jlab_nb_ext_conf') # anaconda related
@@ -67,12 +71,15 @@ ignore.append('ipython_genutils') # will be removed
 ignore.append('libcurl') # already provided by curl
 ignore.append('libgfortran-ng') # already provided by gcc-libs
 ignore.append('liblief') # already provided by lief
+ignore.append('libllvm9') # let pacman choose llvm automatically
 ignore.append('libstdcxx-ng') # already provided by gcc-libs
 ignore.append('navigator-updater') # anaconda related
+ignore.append('prompt_toolkit') # already provided by python-prompt_toolkit
 ignore.append('simplegeneric') # already provided by ipython
 ignore.append('singledispatch') # not needed for python3
 ignore.append('sphinxcontrib') # empty
 ignore.append('unicodecsv') # not needed for python3
+ignore.append('zope') # empty
 
 from pyalpm import Handle
 arch = 'x86_64'
